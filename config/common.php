@@ -20,61 +20,17 @@
 $config = array(
 	'components' => array(
 		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=qe',
-			'username' => 'qe',
-			'password' => 'qe',
+			'connectionString' => 'mysql:host=localhost;dbname=openeyes',
+			'username' => 'root',
+			'password' => '',
 		),
 		'session' => array(
 			'timeout' => 86400
 		),
 		'cacheBuster' => array(
-			'time' => date('Ymd').'01',
+			'time' => '2015020201',
 		),
-		/*
-		'log' => array(
-			'routes' => array(
-				 // SQL logging
-				'system' => array(
-					'class' => 'CFileLogRoute',
-					'levels' => 'trace, info, warning, error',
-					'categories' => 'system.db.CDbCommand',
-					'logFile' => 'sql.log',
-				),
-				// System logging
-				'system' => array(
-					'class' => 'CFileLogRoute',
-					'levels' => 'trace, info, warning, error',
-					'categories' => 'system.*',
-					'logFile' => 'system.log',
-				),
-				// Profiling
-				'profile' => array(
-					'class' => 'CFileLogRoute',
-					'levels' => 'profile',
-					'logFile' => 'profile.log',
-				),
-				// User activity logging
-				'user' => array(
-					'class' => 'CFileLogRoute',
-					'levels' => 'user',
-					'logfile' => 'user.log',
-					'filter' => array(
-						'class' => 'CLogFilter',
-						'prefixSession' => false,
-						'prefixUser' => true,
-						'logUser' => true,
-						'logVars' => array('_GET','_POST'),
-					),
-				),
-				// Log to browser
-				'browser' => array(
-					'class' => 'CWebLogRoute',
-				),
-			),
-		),
-		*/
 	),
-
 	'modules' => array(
 		'OphCiExamination' => array(
 			'class' => '\OEModule\OphCiExamination\OphCiExaminationModule',
@@ -82,7 +38,6 @@ $config = array(
 		'OphTrOperationnote',
 		'eyedraw'
 	),
-
 	'params'=>array(
                 'alerts_email' => 'jamie.neil@omniaperta.com',
                 'adminEmail' => 'jamie.neil@omniaperta.com',
@@ -100,7 +55,8 @@ $config = array(
 		'watermark_admin' => 'QE Demo (admin)',
 		'local_users' => array('admin','username'),
 		'specialty_codes' => array(130),
-		'specialty_sort' => array(130, 'SUP')
+		'specialty_sort' => array(130, 'SUP'),
+		'hide_missing_demographics' => true,
 	),
 );
 
