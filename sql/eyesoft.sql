@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.5.41, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: eyesoft
+-- Host: localhost    Database: qe_eyesoft
 -- ------------------------------------------------------
--- Server version	5.5.41-0ubuntu0.12.04.1
+-- Server version	5.5.41-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1097,7 +1097,7 @@ CREATE TABLE `e_religion` (
   PRIMARY KEY (`nr`),
   KEY `CODE` (`code`),
   KEY `nr` (`nr`,`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1106,7 +1106,7 @@ CREATE TABLE `e_religion` (
 
 LOCK TABLES `e_religion` WRITE;
 /*!40000 ALTER TABLE `e_religion` DISABLE KEYS */;
-INSERT INTO `e_religion` VALUES (32,'1','Atheist',0),(33,'1','Other',0);
+INSERT INTO `e_religion` VALUES (1,'1','Christian',0),(3,'3','Muslim',0),(28,'28','Hindu',0),(30,'30','Buddhist',0),(31,'31','Judaism',0);
 /*!40000 ALTER TABLE `e_religion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1484,4 +1484,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-13 18:00:15
+-- Dump completed on 2015-02-13 19:10:32
